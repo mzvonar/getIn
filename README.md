@@ -23,9 +23,20 @@ const context = {
   
 const gender = getIn(context, ['user', 'profile', 'gender']);
  ```
-  
-  Output should be `female`
+ 
+  gender is `female`
 
+```javascript  
+const country = getIn(context, ['user', 'address', 'country']);
+ ```
+  
+  country is `undefined`
+  
+```javascript  
+const verified = getIn(context, ['user', 'profile', 'verified'], false);
+```
+    
+  verified is `false`
 
 ## Tests
 
