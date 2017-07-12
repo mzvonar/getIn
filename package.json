@@ -1,6 +1,6 @@
 {
   "name": "@mzvonar/getin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get value from object by path. Undefined-safe and accepts default value",
   "main": "index.js",
   "scripts": {
