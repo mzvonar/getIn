@@ -7,7 +7,7 @@
  */
 module.exports = function getIn(context, path, defaultValue) {
     if(!context) {
-        return context;
+        return defaultValue || context;
     }
 
     if(typeof path === 'string') {
