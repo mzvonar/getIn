@@ -1,4 +1,4 @@
-getIn
+getIn [![Build Status](https://travis-ci.org/mzvonar/getIn.svg?branch=master)](https://travis-ci.org/mzvonar/getIn) [![Coverage Status](https://coveralls.io/repos/github/mzvonar/getIn/badge.svg?branch=master)](https://coveralls.io/github/mzvonar/getIn?branch=master)
 =========
 
 Get value from object by path. Path can be string or array (e.g. ['user', 'profile', 'gender']).  
