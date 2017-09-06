@@ -8,7 +8,8 @@ describe('getIn', function() {
                 gender: 'female'
             }
         },
-        type: 'best'
+        type: 'best',
+        13: 'Lucky number'
     };
 
     it('should return value in object by Array path', function() {
@@ -17,6 +18,10 @@ describe('getIn', function() {
 
     it('should return value in object by string path', function() {
         expect(getIn(context, 'type')).toBe('best');
+    });
+
+    it('should return value in object by number path', function() {
+        expect(getIn(context, 13)).toBe('Lucky number');
     });
 
     it('should return undefined if part of path is undefined', function() {
