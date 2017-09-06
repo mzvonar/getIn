@@ -10,7 +10,7 @@ module.exports = function getIn(context, path, defaultValue) {
         return defaultValue || context;
     }
 
-    if(typeof path === 'string') {
+    if(Object.prototype.toString.call(path) !== '[object Array]') {
         path = [path];
     }
 
