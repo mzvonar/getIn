@@ -24,7 +24,7 @@ module.exports = function getIn(context, path, defaultValue) {
     for(var i = 0, length = path.length; i < length; i += 1) {
         result = result[path[i]];
 
-        if(typeof result === 'undefined') {
+        if(typeof result === 'undefined' || result === null) {
             return defaultValue;
         }
     }

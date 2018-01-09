@@ -6,7 +6,8 @@ describe('getIn', function() {
         user: {
             profile: {
                 gender: 'female'
-            }
+            },
+            avatar: null
         },
         type: 'best',
         13: 'Lucky number'
@@ -28,8 +29,16 @@ describe('getIn', function() {
         expect(getIn(context, ['user', 'address', 'country'])).toBe(undefined);
     });
 
+    it('should return undefined if part of path is null', function() {
+        expect(getIn(context, ['user', 'avatar'])).toBe(undefined);
+    });
+
     it('should return defaultValue if part of path is undefined', function() {
         expect(getIn(context, ['user', 'address', 'country'], 'slovakia')).toBe('slovakia');
+    });
+
+    it('should return defaultValue if part of path is null', function() {
+        expect(getIn(context, ['user', 'avatar'], 'slovakia')).toBe('slovakia');
     });
 
     it('should return context if context is falsy', function() {
