@@ -51,6 +51,13 @@ describe('getIn', function() {
         expect(getIn(context, ['user', 'address', 'country'], 'slovakia')).toBe('slovakia');
     });
 
+    it('should not mutate path argument', function(){
+        const path = ['user', 'profile', 'gender'];
+        getIn(context, path, 'male');
+
+        expect(path).toEqual(['user', 'profile', 'gender']);
+    });
+
     it('should throw error if path is undefined', function() {
         expect(function() {
             getIn(context, undefined, 'slovakia')
